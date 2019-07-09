@@ -1,0 +1,18 @@
+<a href="{% url 'home' %}" >Restart </a>
+<br/>
+
+
+<h1>  There are {{count}} words in your text. </h1>
+
+<h1> Your Text: </h1>
+
+{{fulltext}}
+
+<h1> Word count: <h1>
+
+<br/>
+
+{% for word, occurence in sortedwords %}
+{{word}} - {{occurence}}
+<br/>
+{% endfor %}
